@@ -57,7 +57,76 @@ namespace MyFirstCodeOOP
                     Salary = salary,
                 };
 
-                //Console.WriteLine(salaryEmployee);
+                Console.WriteLine("");
+
+                Console.WriteLine("***********************");
+                Console.WriteLine("* COMMISSION EMPLOYEE *");
+                Console.WriteLine("***********************");
+
+                Console.WriteLine("Type your ID");
+                id = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Type your first name");
+                firstName = Console.ReadLine();
+
+                Console.WriteLine("Type your last name");
+                lastName = Console.ReadLine();
+
+                Console.WriteLine("Are you active?");
+                isActive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.WriteLine("Enter your commission percentage:");
+                float commissionPercentage = Convert.ToSingle(Console.ReadLine());
+
+                Console.WriteLine("Enter your sales:");
+                decimal sales = Convert.ToDecimal(Console.ReadLine());
+
+                Employee commissionEmployee = new CommissionEmployee()
+                {
+                    Id = id,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    Birthdate = new Date(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
+                    Hiringdate = new Date(2022, 3, 4),
+                    IsActive = isActive,
+                    CommissionPercentage = commissionPercentage,
+                    Sales = sales,
+                };
+                Console.WriteLine("");
+
+                Console.WriteLine("***********************");
+                Console.WriteLine("* CONTRACTOR EMPLOYEE *");
+                Console.WriteLine("***********************");
+
+                Console.WriteLine("Type your ID");
+                id = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Type your first name");
+                firstName = Console.ReadLine();
+
+                Console.WriteLine("Type your last name");
+                lastName = Console.ReadLine();
+
+                Console.WriteLine("Are you active?");
+                isActive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.WriteLine("Enter your number of hours:");
+                float hours = Convert.ToSingle(Console.ReadLine());
+
+                Console.WriteLine("Enter your value per hour:");
+                decimal hourValue = Convert.ToDecimal(Console.ReadLine());
+
+                Employee contractorEmployee = new ContractorEmployee()
+                {
+                    Id = id,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    Birthdate = new Date(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
+                    Hiringdate = new Date(2022, 3, 4),
+                    IsActive = isActive,
+                    Hours = hours,
+                    HourValue = hourValue,
+                };
                 Console.WriteLine("");
 
                 Console.WriteLine("******************************");
@@ -85,13 +154,13 @@ namespace MyFirstCodeOOP
                 Console.WriteLine("Enter your salary base:");
                 decimal salaryBase = Convert.ToDecimal(Console.ReadLine());
 
-                Employee baseComissionEmployee = new BaseCommissionEmployee()
+                Employee baseComissionEmployee = new BaseCommissionEmploye()
                 {
                     Id = id,
                     FirstName = firstName,
                     LastName = lastName,
-                    BirthDate = new Date(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
-                    HiringDate = new Date(2022, 3, 4),
+                    Birthdate = new Date(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
+                    Hiringdate = new Date(2022, 3, 4),
                     IsActive = isActive,
                     CommissionPercentage = commissionPercentage,
                     Sales = sales,
