@@ -15,11 +15,13 @@ namespace MyFirstCodeOOP
         #region constructor
         public Date(int year, int month, int day)
     {
-            this._year = year;
+            this._year = validateyear(year);
             this._month = validateMonth(month);
             this._day = validateDay(day,month);
 
     }
+
+       
         #endregion
 
         #region methods
@@ -63,9 +65,16 @@ namespace MyFirstCodeOOP
             }
             throw new MonthException("the month is invalid");
         }
-        
-            
-       #endregion
+        private int validateyear(int year)
+        {
+            if (year >= 1900)
+            {
+                return year;
+            }
+            throw new YearException();
+        }
+
+        #endregion
 
     }
 
