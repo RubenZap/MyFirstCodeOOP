@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32.SafeHandles;
+using System;
 
 namespace MyFirstCodeOOP
 {
@@ -8,23 +9,55 @@ namespace MyFirstCodeOOP
         {
             try 
             {
-                var dateObject = new Date(1, 2, 3);
-                Console.WriteLine(dateObject);
+                Console.WriteLine("****************");
+                Console.WriteLine("* OOP CONCEPTS *");
+                Console.WriteLine("****************");
 
-                Console.WriteLine("********Testing lastest implementation********");
-                //employe madre
-                //salaryEmployee hija
-                Employee salaryEmployee = new SalaryEmployee() 
+                Console.WriteLine("Please put your birth date year:");
+                var year = Console.ReadLine();
+                Console.WriteLine("");
+                Console.WriteLine("Please put your birth date month:");
+                var month = Console.ReadLine();
+                Console.WriteLine("");
+                Console.WriteLine("Please put your birth date day:");
+                var day = Console.ReadLine();
+                Console.WriteLine("");
+                Console.WriteLine(new Date(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)));
+                Console.WriteLine("");
+                Console.WriteLine("******Testing latest implementation*******");
+                Console.WriteLine("");
+
+                Console.WriteLine("*******************");
+                Console.WriteLine("* SALARY EMPLOYEE *");
+                Console.WriteLine("*******************");
+
+                Console.WriteLine("Type your ID");
+                int id = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Type your first name");
+                string firstName = Console.ReadLine();
+
+                Console.WriteLine("Type your last name");
+                string lastName = Console.ReadLine();
+
+                Console.WriteLine("Are you active?");
+                bool isActive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.WriteLine("Enter your salary:");
+                decimal salary = Convert.ToDecimal(Console.ReadLine());
+
+                Employee salaryEmployee = new SalaryEmployee()
                 {
-                    Id = 1000,
-                    LastName = "Posada",
-                    FirstName = "Maria", 
-                    Birthdate = new Date(1950, 2, 5),
-                    Hiringdate = new Date(2022, 12, 31),
-                    IsActive = true,
-                    Salary = 2000000.34m
+                    Id = id,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    Birthdate = new Date(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
+                    Hiringdate = new Date(2022, 3, 4),
+                    IsActive = isActive,
+                    Salary = salary,
                 };
-                Console.WriteLine(salaryEmployee);
+
+                //Console.WriteLine(salaryEmployee);
             }
             catch (Exception ex) 
             {
