@@ -176,6 +176,19 @@ namespace MyFirstCodeOOP
 
                 EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee,commissionEmployee,contractorEmployee,baseComissionEmployee);
                 Console.WriteLine($"total payroll:.........{employeeHelper.GetPayRollFromActiveEmployee():C2}");
+
+                Console.WriteLine("***********");
+                Console.WriteLine("* INVOICE *");
+                Console.WriteLine("***********");
+
+                Invoice invoice = new Invoice()
+                {
+                    Id = 2012015,
+                    Description = "iPhone 13",
+                    Price = 4500000,
+                    Quantity = 2,
+                };
+                Console.WriteLine(invoice);
             }
             catch (Exception ex) 
             {

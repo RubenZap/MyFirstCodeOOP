@@ -11,7 +11,7 @@ namespace MyFirstCodeOOP
         #endregion
 
         #region Methods
-        public override decimal GetValueToPay()
+        public decimal GetValueToPay()
         {
             return base.GetValueToPay() + Base;
         }
