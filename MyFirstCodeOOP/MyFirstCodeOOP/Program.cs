@@ -1,5 +1,9 @@
 ﻿using Microsoft.Win32.SafeHandles;
+using MyFirstCodeOOP.Helper;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
 
 namespace MyFirstCodeOOP
 {
@@ -56,7 +60,7 @@ namespace MyFirstCodeOOP
                     IsActive = isActive,
                     Salary = salary,
                 };
-
+                //Console.WriteLine(salaryEmployee);
                 Console.WriteLine("");
 
                 Console.WriteLine("***********************");
@@ -92,6 +96,7 @@ namespace MyFirstCodeOOP
                     CommissionPercentage = commissionPercentage,
                     Sales = sales,
                 };
+                //Console.WriteLine(commissionEmployee);
                 Console.WriteLine("");
 
                 Console.WriteLine("***********************");
@@ -127,6 +132,7 @@ namespace MyFirstCodeOOP
                     Hours = hours,
                     HourValue = hourValue,
                 };
+                //Console.WriteLine(contractorEmployee);
                 Console.WriteLine("");
 
                 Console.WriteLine("******************************");
@@ -166,6 +172,10 @@ namespace MyFirstCodeOOP
                     Sales = sales,
                     Base = salaryBase
                 };
+                //Console.WriteLine(baseComissionEmploye);
+
+                EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee,commissionEmployee,contractorEmployee,baseComissionEmployee);
+                Console.WriteLine($"total payroll:.........{employeeHelper.GetPayRollFromActiveEmployee():C2}");
             }
             catch (Exception ex) 
             {
